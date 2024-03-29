@@ -1,0 +1,80 @@
+/* Define keyframes for the animation */
+@keyframes slider {
+  0% {
+    background-image: url('./image/img1.jpg');
+  }
+  25% {
+    background-image: url('./image/img2.jpg');
+  }
+  50% {
+    background-image: url('./image/img3.jpg');
+  }
+  75% {
+    background-image: url('./image/img4.jpg');
+  }
+  100% {
+    background-image: url('./image/img5.jpg');
+  }
+}
+
+/* Apply animation to the body element */
+.bg-image {
+  animation: slider 10s infinite ease-out;
+  background-size: cover;
+}
+
+.bg-landing{
+  background-size: cover;
+  background-image: url(/src/image/bg2.jpg);
+}
+
+body {
+  margin: 0;
+}
+
+#root{
+  margin: 0;
+}
+
+#autotype-container {
+  width: 300px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#autotype-text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid #000;
+  animation: autotype 5s linear; /* Tanpa penggunaan steps() */
+}
+
+@keyframes autotype {
+  from { width: 0; }
+}
+
+.judul {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingAnim 3s steps(27);
+}
+
+@keyframes typingAnim {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.custom-shadow {
+  box-shadow: 0px 0px 10px rgba(0.19, 0.1, 0.2, 0.5);
+}
